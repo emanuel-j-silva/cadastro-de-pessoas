@@ -4,7 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8d23a327-6642-4eee-95df-caee05c420e2" name="Changes" comment="&gt;" />
+    <list default="true" id="8d23a327-6642-4eee-95df-caee05c420e2" name="Changes" comment="&gt;">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-app/src/main/java/com/example/application/Service/ExcluirPessoaService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-app/src/main/java/com/example/application/Service/FindAllPessoaService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-app/src/main/java/com/example/application/Service/FindOnePessoaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/main/java/com/example/application/Controller/PessoaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/main/java/com/example/application/Controller/PessoaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/main/java/com/example/application/View/listperson/ListPersonView.java" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/main/java/com/example/application/View/listperson/ListPersonView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/target/classes/com/example/application/Controller/PessoaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/target/classes/com/example/application/Controller/PessoaController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/target/classes/com/example/application/View/listperson/ListPersonView$SampleItem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/target/classes/com/example/application/View/listperson/ListPersonView.class" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/target/classes/com/example/application/View/listperson/ListPersonView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/target/vaadin-dev-server-settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/target/vaadin-dev-server-settings.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -56,7 +68,8 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "D:/Documents/GitHub/cadastro-de-pessoas",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "D:/Documents/GitHub/cad-pessoas",
     "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
   }
 }]]></component>
@@ -90,7 +103,14 @@
       <option name="project" value="LOCAL" />
       <updated>1714369555688</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="&gt;">
+      <created>1714477145769</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1714477145769</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
