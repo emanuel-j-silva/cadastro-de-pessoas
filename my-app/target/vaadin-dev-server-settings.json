@@ -1,0 +1,17 @@
+{
+  "frontendFolder": "D:/Documents/GitHub/cadastro-de-pessoas/my-app/./frontend",
+  "themeFolder": "themes",
+  "themeResourceFolder": "D:/Documents/GitHub/cadastro-de-pessoas/my-app/./frontend/generated/jar-resources",
+  "staticOutput": "D:/Documents/GitHub/cadastro-de-pessoas/my-app/target/classes/META-INF/VAADIN/webapp/VAADIN/static",
+  "generatedFolder": "generated",
+  "statsOutput": "D:\\Documents\\GitHub\\cadastro-de-pessoas\\my-app\\target\\classes\\META-INF\\VAADIN\\config",
+  "frontendBundleOutput": "D:\\Documents\\GitHub\\cadastro-de-pessoas\\my-app\\target\\classes\\META-INF\\VAADIN\\webapp",
+  "devBundleOutput": "D:/Documents/GitHub/cadastro-de-pessoas/my-app/target/dev-bundle/webapp",
+  "devBundleStatsOutput": "D:/Documents/GitHub/cadastro-de-pessoas/my-app/target/dev-bundle/config",
+  "jarResourcesFolder": "D:/Documents/GitHub/cadastro-de-pessoas/my-app/./frontend/generated/jar-resources",
+  "themeName": "cadastro-pessoas",
+  "clientServiceWorkerSource": "D:\\Documents\\GitHub\\cadastro-de-pessoas\\my-app\\target\\sw.ts",
+  "pwaEnabled": false,
+  "offlineEnabled": false,
+  "offlinePath": "'offline.html'"
+}
