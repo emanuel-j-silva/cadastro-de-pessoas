@@ -15,6 +15,8 @@ import com.vaadin.flow.component.dependency.Uses;
 import com.vaadin.flow.component.formlayout.FormLayout;
 import com.vaadin.flow.component.html.H3;
 import com.vaadin.flow.component.icon.Icon;
+import com.vaadin.flow.component.notification.Notification;
+import com.vaadin.flow.component.notification.NotificationVariant;
 import com.vaadin.flow.component.orderedlayout.FlexComponent.Alignment;
 import com.vaadin.flow.component.orderedlayout.FlexComponent.JustifyContentMode;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
@@ -37,18 +39,19 @@ import java.util.List;
 @Uses(Icon.class)
 public class PersonFormView extends Composite<VerticalLayout> {
 
+    private TextField txtNome = new TextField();
+    private DatePicker lblData = new DatePicker();
+    private ComboBox lblSexo = new ComboBox();
+    private Checkbox lblVoluntario = new Checkbox();
+
     public PersonFormView() {
 
         VerticalLayout layoutColumn2 = new VerticalLayout();
         H3 h3 = new H3();
         FormLayout formLayout2Col = new FormLayout();
-        TextField txtNome = new TextField();
-        DatePicker lblData = new DatePicker();
-        ComboBox lblSexo = new ComboBox();
-        Checkbox lblVoluntario = new Checkbox();
         HorizontalLayout layoutRow = new HorizontalLayout();
         Button buttonSave = new Button();
-        Button buttonSecondary = new Button();
+        Button buttonCancel = new Button();
         getContent().setWidth("100%");
         getContent().getStyle().set("flex-grow", "1");
         getContent().setJustifyContentMode(JustifyContentMode.START);
@@ -72,8 +75,8 @@ public class PersonFormView extends Composite<VerticalLayout> {
         buttonSave.setText("Save");
         buttonSave.setWidth("min-content");
         buttonSave.addThemeVariants(ButtonVariant.LUMO_PRIMARY);
-        buttonSecondary.setText("Cancel");
-        buttonSecondary.setWidth("min-content");
+        buttonCancel.setText("Cancel");
+        buttonCancel.setWidth("min-content");
         getContent().add(layoutColumn2);
         layoutColumn2.add(h3);
         layoutColumn2.add(formLayout2Col);
@@ -83,12 +86,31 @@ public class PersonFormView extends Composite<VerticalLayout> {
         formLayout2Col.add(lblVoluntario);
         layoutColumn2.add(layoutRow);
         layoutRow.add(buttonSave);
-        layoutRow.add(buttonSecondary);
+        layoutRow.add(buttonCancel);
 
-        buttonSave.addClickListener(buttonClickEvent -> enviaDados(
-                txtNome.getValue(),lblData.getValue(),(Sexo)lblSexo.getValue(),lblVoluntario.getValue()
-        ));
+
+        buttonSave.addClickListener(buttonClickEvent -> {
+            enviaDados(txtNome.getValue(),lblData.getValue(),
+                    (Sexo)lblSexo.getValue(),lblVoluntario.getValue());
+            clearDados();
+            Notification notification = Notification.show("Pessoa cadastrada com sucesso!");
+            notification.addThemeVariants(NotificationVariant.LUMO_SUCCESS);
+            notification.setPosition(Notification.Position.BOTTOM_CENTER);
+            notification.setDuration(3000);
+
+        });
+
+        buttonCancel.addClickListener(buttonClickEvent -> clearDados());
+
     }
+
+    public void clearDados(){
+        txtNome.clear();
+        lblData.clear();
+        lblSexo.clear();
+        lblVoluntario.clear();
+    }
+
 
     private void enviaDados(String nome, LocalDate dataNascimento, Sexo sexo, Boolean voluntario){
         try{
