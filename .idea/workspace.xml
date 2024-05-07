@@ -4,19 +4,36 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8d23a327-6642-4eee-95df-caee05c420e2" name="Changes" comment="implementação das seguintes funções: listar todos e excluir">
+    <list default="true" id="8d23a327-6642-4eee-95df-caee05c420e2" name="Changes" comment="melhorias">
+      <change afterPath="$PROJECT_DIR$/my-app/src/main/java/com/example/application/Controller/GlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-app/src/main/java/com/example/application/Exception/PessoaExistenteException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-app/src/main/java/com/example/application/Exception/PessoaNotFoundException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/cadastro-pessoas.iml" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/cadastro-pessoas.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/main/java/com/example/application/Controller/PessoaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/main/java/com/example/application/Controller/PessoaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/main/java/com/example/application/Repository/PessoaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/main/java/com/example/application/Repository/PessoaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/main/java/com/example/application/Service/CadastrarPessoaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/main/java/com/example/application/Service/CadastrarPessoaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/main/java/com/example/application/Service/ExcluirPessoaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/main/java/com/example/application/Service/ExcluirPessoaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/main/java/com/example/application/Service/FindOnePessoaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/main/java/com/example/application/Service/FindOnePessoaService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/main/java/com/example/application/View/listperson/ListPersonView.java" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/main/java/com/example/application/View/listperson/ListPersonView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/main/java/com/example/application/View/myview/InitialView.java" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/main/java/com/example/application/View/myview/InitialView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/main/java/com/example/application/View/personform/PersonFormView.java" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/main/java/com/example/application/View/personform/PersonFormView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/target/classes/com/example/application/Repository/PessoaRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/target/classes/com/example/application/Repository/PessoaRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/target/classes/com/example/application/Service/CadastrarPessoaService.class" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/target/classes/com/example/application/Service/CadastrarPessoaService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/target/classes/com/example/application/Service/ExcluirPessoaService.class" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/target/classes/com/example/application/Service/ExcluirPessoaService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/target/classes/com/example/application/View/listperson/ListPersonView$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/target/classes/com/example/application/View/listperson/ListPersonView$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/target/classes/com/example/application/View/listperson/ListPersonView.class" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/target/classes/com/example/application/View/listperson/ListPersonView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/target/classes/com/example/application/View/myview/InitialView.class" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/target/classes/com/example/application/View/myview/InitialView.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/target/classes/com/example/application/View/personform/PersonFormView.class" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/target/classes/com/example/application/View/personform/PersonFormView.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -60,15 +77,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Documents/GitHub/cad-pessoas&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "D:/Documents/GitHub/cad-pessoas",
+    "settings.editor.selected.configurable": "project.propCompiler"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -113,7 +130,21 @@
       <option name="project" value="LOCAL" />
       <updated>1714507126841</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="implementação de notificações e função de exibição de informações">
+      <created>1714626411499</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1714626411499</updated>
+    </task>
+    <task id="LOCAL-00007" summary="melhorias">
+      <created>1714626484047</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1714626484047</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -142,6 +173,8 @@
     <MESSAGE value="estrutura inicial do projeto e implementacao da funcao salvar" />
     <MESSAGE value="&gt;" />
     <MESSAGE value="implementação das seguintes funções: listar todos e excluir" />
-    <option name="LAST_COMMIT_MESSAGE" value="implementação das seguintes funções: listar todos e excluir" />
+    <MESSAGE value="implementação de notificações e função de exibição de informações" />
+    <MESSAGE value="melhorias" />
+    <option name="LAST_COMMIT_MESSAGE" value="melhorias" />
   </component>
 </project>

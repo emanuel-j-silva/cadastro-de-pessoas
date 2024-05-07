@@ -35,7 +35,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @PageTitle("Person Form")
-@Route(value = "person-form")
+@Route(value = "person-form", layout = MainLayout.class)
 @Uses(Icon.class)
 public class PersonFormView extends Composite<VerticalLayout> {
 

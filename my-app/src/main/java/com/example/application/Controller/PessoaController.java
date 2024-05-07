@@ -39,11 +39,13 @@ public class PessoaController {
     @GetMapping("/api/pessoas")
     public ResponseEntity<List<Pessoa>> findAllPessoas(){
         var listPessoas = findAll.executar();
-        return ResponseEntity.status(HttpStatus.OK).body(listPessoas);
+        return listPessoas != null ?
+                ResponseEntity.status(HttpStatus.OK).body(listPessoas):
+                ResponseEntity.status(HttpStatus.NO_CONTENT).build();
     }
 
     @GetMapping("/api/pessoas/{id}")
-    public ResponseEntity<Pessoa> findOnePessoa(@PathVariable(value = "id")Integer id){
+    public ResponseEntity<Object> findOnePessoa(@PathVariable(value = "id")Integer id){
         var pessoa = findOne.executar(id);
         return ResponseEntity.status(HttpStatus.OK).body(pessoa);
     }
@@ -51,6 +53,6 @@ public class PessoaController {
     @DeleteMapping("/api/pessoas/{id}")
     public ResponseEntity<Object> deletarPessoa(@PathVariable(value = "id")Integer id){
         var pessoa = findOne.executar(id);
-        return ResponseEntity.status(HttpStatus.OK).body(excluirPessoa.executar(pessoa));
+        return ResponseEntity.status(HttpStatus.OK).body("Pessoa deletada com sucesso.");
     }
 }

@@ -21,8 +21,7 @@ import com.vaadin.flow.theme.lumo.LumoUtility.Gap;
 import com.vaadin.flow.theme.lumo.LumoUtility.Padding;
 
 @PageTitle("Initial View")
-@Route(value = "")
-@RouteAlias(value = "home", layout = MainLayout.class)
+@Route(value = "", layout = MainLayout.class)
 @Uses(Icon.class)
 public class InitialView extends Composite<VerticalLayout> {
 

@@ -1,6 +1,7 @@
 package com.example.application.View.listperson;
 
 import com.example.application.Model.Pessoa;
+import com.example.application.View.MainLayout;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.vaadin.flow.component.Composite;
@@ -31,7 +32,7 @@ import java.util.List;
 
 
 @PageTitle("List Person")
-@Route(value = "list-person")
+@Route(value = "list-person", layout = MainLayout.class)
 @Uses(Icon.class)
 public class ListPersonView extends Composite<VerticalLayout> {
 

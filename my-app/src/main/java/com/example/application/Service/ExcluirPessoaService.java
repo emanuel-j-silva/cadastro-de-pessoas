@@ -12,6 +12,9 @@ public class ExcluirPessoaService {
     PessoaRepository pessoaRepository;
 
     public String executar(Pessoa pessoa){
+        if (!pessoaRepository.existsById(pessoa.getId())){
+
+        }
         pessoaRepository.delete(pessoa);
         return "Pessoa deletada com sucesso.";
     }
