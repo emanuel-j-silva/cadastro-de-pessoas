@@ -33,7 +33,7 @@ public class PessoaController {
         pessoa.setSexo(pessoaDTO.sexo());
         pessoa.setVoluntario(pessoaDTO.voluntario());
 
-        return ResponseEntity.status(HttpStatus.OK).body(cadastrarPessoa.executar(pessoa));
+        return ResponseEntity.status(HttpStatus.CREATED).body(cadastrarPessoa.executar(pessoa));
     }
 
     @GetMapping("/api/pessoas")
@@ -53,6 +53,6 @@ public class PessoaController {
     @DeleteMapping("/api/pessoas/{id}")
     public ResponseEntity<Object> deletarPessoa(@PathVariable(value = "id")Integer id){
         var pessoa = findOne.executar(id);
-        return ResponseEntity.status(HttpStatus.OK).body("Pessoa deletada com sucesso.");
+        return ResponseEntity.status(HttpStatus.OK).body(excluirPessoa.executar(pessoa));
     }
 }

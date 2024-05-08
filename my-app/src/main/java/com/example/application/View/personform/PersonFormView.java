@@ -6,6 +6,8 @@ import com.example.application.View.MainLayout;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import com.vaadin.flow.component.Composite;
+import com.vaadin.flow.component.Text;
+import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.button.ButtonVariant;
 import com.vaadin.flow.component.checkbox.Checkbox;
@@ -24,8 +26,17 @@ import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
+import com.vaadin.flow.server.RequestHandler;
+import com.vaadin.flow.server.VaadinRequest;
+import com.vaadin.flow.server.VaadinResponse;
+import com.vaadin.flow.server.VaadinSession;
 import com.vaadin.flow.theme.lumo.LumoUtility.Gap;
+import org.springframework.boot.web.reactive.function.client.WebClientCustomizer;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.reactive.function.client.WebClient;
 
+import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
@@ -37,12 +48,13 @@ import java.util.List;
 @PageTitle("Person Form")
 @Route(value = "person-form", layout = MainLayout.class)
 @Uses(Icon.class)
-public class PersonFormView extends Composite<VerticalLayout> {
+public class PersonFormView extends Composite<VerticalLayout>{
 
-    private TextField txtNome = new TextField();
-    private DatePicker lblData = new DatePicker();
-    private ComboBox lblSexo = new ComboBox();
-    private Checkbox lblVoluntario = new Checkbox();
+    private final TextField txtNome = new TextField();
+    private final DatePicker lblData = new DatePicker();
+    private final ComboBox lblSexo = new ComboBox();
+    private final Checkbox lblVoluntario = new Checkbox();
+    WebClient webClient = WebClient.create("http://localhost:8080/api");
 
     public PersonFormView() {
 
@@ -88,16 +100,18 @@ public class PersonFormView extends Composite<VerticalLayout> {
         layoutRow.add(buttonSave);
         layoutRow.add(buttonCancel);
 
+        buttonSave.addClickListener(event -> {
+            PessoaDTO pessoaDTO = new PessoaDTO(txtNome.getValue(),lblData.getValue(),
+                    (Sexo) lblSexo.getValue(),lblVoluntario.getValue());
 
-        buttonSave.addClickListener(buttonClickEvent -> {
-            enviaDados(txtNome.getValue(),lblData.getValue(),
-                    (Sexo)lblSexo.getValue(),lblVoluntario.getValue());
+            webClient.post().uri("/pessoas").bodyValue(pessoaDTO).retrieve()
+                    .toBodilessEntity()
+                    .subscribe(response -> {
+                            showNotification("Pessoa cadastrada com sucesso",true);
+                    }, error ->{
+                        showNotification("Erro ao cadastrar",false);
+                    });
             clearDados();
-            Notification notification = Notification.show("Pessoa cadastrada com sucesso!");
-            notification.addThemeVariants(NotificationVariant.LUMO_SUCCESS);
-            notification.setPosition(Notification.Position.BOTTOM_CENTER);
-            notification.setDuration(3000);
-
         });
 
         buttonCancel.addClickListener(buttonClickEvent -> clearDados());
@@ -111,37 +125,23 @@ public class PersonFormView extends Composite<VerticalLayout> {
         lblVoluntario.clear();
     }
 
+    private void showNotification(String message, boolean success){
+        getUI().ifPresent(ui -> ui.access(()->{
+            Notification notification = new Notification();
 
-    private void enviaDados(String nome, LocalDate dataNascimento, Sexo sexo, Boolean voluntario){
-        try{
-            var client = HttpClient.newHttpClient();
-            PessoaDTO pessoaDTO = new PessoaDTO(nome,dataNascimento,sexo,voluntario);
+            notification.setDuration(3000);
+            notification.setPosition(Notification.Position.BOTTOM_CENTER);
+            notification.setText(message);
 
-            ObjectMapper mapper = new ObjectMapper();
-            mapper.registerModule(new JavaTimeModule());
-            String json = mapper.writeValueAsString(pessoaDTO);
-
-            HttpRequest request = HttpRequest.newBuilder()
-                    .uri(URI.create("http://localhost:8080/api/pessoas"))
-                    .header("Content-Type", "application/json")
-                    .POST(HttpRequest.BodyPublishers.ofString(json))
-                    .build();
-
-            client.sendAsync(request, HttpResponse.BodyHandlers.ofString())
-                    .thenAccept(response -> {
-                        System.out.println("Status Code: " + response.statusCode());
-                        System.out.println("Response: " + response.body());
-                    })
-                    .exceptionally(e -> {
-                        e.printStackTrace();
-                        return null;
-                    });
-        }catch (Exception e){
-            e.printStackTrace();
-        }
+            if (success) {
+                notification.addThemeVariants(NotificationVariant.LUMO_SUCCESS);
+            }
+            else{
+                notification.addThemeVariants(NotificationVariant.LUMO_ERROR);
+            }
+            notification.open();
+        }));
     }
-
-
 
     private void setComboBoxSampleData(ComboBox comboBox) {
         comboBox.setItems(Sexo.values());

@@ -4,27 +4,42 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8d23a327-6642-4eee-95df-caee05c420e2" name="Changes" comment="melhorias">
-      <change afterPath="$PROJECT_DIR$/my-app/src/main/java/com/example/application/Controller/GlobalExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app/src/main/java/com/example/application/Exception/PessoaExistenteException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app/src/main/java/com/example/application/Exception/PessoaNotFoundException.java" afterDir="false" />
+    <list default="true" id="8d23a327-6642-4eee-95df-caee05c420e2" name="Changes" comment="padronização do mainLayout, inclusão de tratamento de exceção com exceptionHandler">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_buffer_4_1_109_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_4_1_109_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_dns_4_1_109_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_http2_4_1_109_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_http_4_1_109_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_socks_4_1_109_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_common_4_1_109_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_handler_4_1_109_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_handler_proxy_4_1_109_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_resolver_4_1_109_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_resolver_dns_4_1_109_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_resolver_dns_classes_macos_4_1_109_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_resolver_dns_native_macos_osx_x86_64_4_1_109_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_4_1_109_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_classes_epoll_4_1_109_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_native_epoll_linux_x86_64_4_1_109_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_native_unix_common_4_1_109_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_projectreactor_netty_reactor_netty_core_1_1_18.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_projectreactor_netty_reactor_netty_http_1_1_18.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_projectreactor_reactor_core_3_6_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_projectreactor_reactor_test_3_6_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_reactivestreams_reactive_streams_1_0_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_reactor_netty_3_2_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_webflux_3_2_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webflux_6_1_6.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/cadastro-pessoas.iml" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/cadastro-pessoas.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/main/java/com/example/application/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/main/java/com/example/application/Application.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/main/java/com/example/application/Controller/PessoaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/main/java/com/example/application/Controller/PessoaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/main/java/com/example/application/Repository/PessoaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/main/java/com/example/application/Repository/PessoaRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/main/java/com/example/application/Service/CadastrarPessoaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/main/java/com/example/application/Service/CadastrarPessoaService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/main/java/com/example/application/Service/ExcluirPessoaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/main/java/com/example/application/Service/ExcluirPessoaService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/main/java/com/example/application/Service/FindOnePessoaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/main/java/com/example/application/Service/FindOnePessoaService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/main/java/com/example/application/View/listperson/ListPersonView.java" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/main/java/com/example/application/View/listperson/ListPersonView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/main/java/com/example/application/View/myview/InitialView.java" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/main/java/com/example/application/View/myview/InitialView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/main/java/com/example/application/View/personform/PersonFormView.java" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/main/java/com/example/application/View/personform/PersonFormView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/target/classes/com/example/application/Repository/PessoaRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/target/classes/com/example/application/Repository/PessoaRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/target/classes/com/example/application/Service/CadastrarPessoaService.class" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/target/classes/com/example/application/Service/CadastrarPessoaService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/target/classes/com/example/application/Controller/PessoaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/target/classes/com/example/application/Controller/PessoaController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/target/classes/com/example/application/Service/ExcluirPessoaService.class" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/target/classes/com/example/application/Service/ExcluirPessoaService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/target/classes/com/example/application/View/listperson/ListPersonView$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/target/classes/com/example/application/View/listperson/ListPersonView$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/target/classes/com/example/application/View/listperson/ListPersonView.class" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/target/classes/com/example/application/View/listperson/ListPersonView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/target/classes/com/example/application/View/myview/InitialView.class" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/target/classes/com/example/application/View/myview/InitialView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/target/classes/com/example/application/Service/FindOnePessoaService.class" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/target/classes/com/example/application/Service/FindOnePessoaService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/target/classes/com/example/application/View/personform/PersonFormView.class" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/target/classes/com/example/application/View/personform/PersonFormView.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -144,7 +159,14 @@
       <option name="project" value="LOCAL" />
       <updated>1714626484047</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="padronização do mainLayout, inclusão de tratamento de exceção com exceptionHandler">
+      <created>1715124565582</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1715124565582</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -175,6 +197,7 @@
     <MESSAGE value="implementação das seguintes funções: listar todos e excluir" />
     <MESSAGE value="implementação de notificações e função de exibição de informações" />
     <MESSAGE value="melhorias" />
-    <option name="LAST_COMMIT_MESSAGE" value="melhorias" />
+    <MESSAGE value="padronização do mainLayout, inclusão de tratamento de exceção com exceptionHandler" />
+    <option name="LAST_COMMIT_MESSAGE" value="padronização do mainLayout, inclusão de tratamento de exceção com exceptionHandler" />
   </component>
 </project>
