@@ -27,8 +27,8 @@ public class Endereco {
     @ColumnTransformer(write = "?::jsonb")
     private DadosEndereco dadosEndereco;
 
-    @ManyToOne
-    @JoinColumn(name = "pessoa_id", nullable = false)
+    @OneToOne
+    @JoinColumn(name = "pessoa_id", nullable = false, unique = true)
     private Pessoa pessoa;
 
 }

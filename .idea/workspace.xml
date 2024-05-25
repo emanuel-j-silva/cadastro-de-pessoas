@@ -4,22 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8d23a327-6642-4eee-95df-caee05c420e2" name="Changes" comment="criação da classe Endereço">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_bind_jaxb_api_2_3_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app/src/main/java/com/example/application/Config/DadosEnderecoConverter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app/src/main/java/com/example/application/Controller/EnderecoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app/src/main/java/com/example/application/DTO/DadosEnderecoDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app/src/main/java/com/example/application/Model/DadosEndereco.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app/src/main/java/com/example/application/Repository/EnderecoRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app/src/main/java/com/example/application/Service/CadastrarEnderecoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_vladmihalcea_hibernate_types_52_2_2_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_vladmihalcea_hibernate_types_60_2_21_1.xml" afterDir="false" />
+    <list default="true" id="8d23a327-6642-4eee-95df-caee05c420e2" name="Changes" comment="implementação e configuração inicial - JsonB em Endereços">
+      <change afterPath="$PROJECT_DIR$/my-app/src/main/java/com/example/application/Service/FindEnderecoByPessoaService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/cadastro-pessoas.iml" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/cadastro-pessoas.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/main/java/com/example/application/Controller/EnderecoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/main/java/com/example/application/Controller/EnderecoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/main/java/com/example/application/Model/Endereco.java" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/main/java/com/example/application/Model/Endereco.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/main/java/com/example/application/Repository/EnderecoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/main/java/com/example/application/Repository/EnderecoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/target/classes/com/example/application/Controller/EnderecoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/target/classes/com/example/application/Controller/EnderecoController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/target/classes/com/example/application/Model/Endereco.class" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/target/classes/com/example/application/Model/Endereco.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/target/classes/com/example/application/Repository/EnderecoRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/target/classes/com/example/application/Repository/EnderecoRepository.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,7 +159,14 @@
       <option name="project" value="LOCAL" />
       <updated>1716029518898</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="implementação e configuração inicial - JsonB em Endereços">
+      <created>1716257751537</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1716257751537</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -200,6 +200,7 @@
     <MESSAGE value="padronização do mainLayout, inclusão de tratamento de exceção com exceptionHandler" />
     <MESSAGE value="aplicação de tratamento de erros" />
     <MESSAGE value="criação da classe Endereço" />
-    <option name="LAST_COMMIT_MESSAGE" value="criação da classe Endereço" />
+    <MESSAGE value="implementação e configuração inicial - JsonB em Endereços" />
+    <option name="LAST_COMMIT_MESSAGE" value="implementação e configuração inicial - JsonB em Endereços" />
   </component>
 </project>
