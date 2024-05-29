@@ -1,11 +1,9 @@
 package com.example.application.Controller;
 
+import com.example.application.DTO.PessoaAndEnderecoDTO;
 import com.example.application.DTO.PessoaDTO;
 import com.example.application.Model.Pessoa;
-import com.example.application.Service.CadastrarPessoaService;
-import com.example.application.Service.ExcluirPessoaService;
-import com.example.application.Service.FindAllPessoaService;
-import com.example.application.Service.FindOnePessoaService;
+import com.example.application.Service.*;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -19,6 +17,7 @@ public class PessoaController {
 
     @Autowired CadastrarPessoaService cadastrarPessoa;
     @Autowired FindAllPessoaService findAll;
+    @Autowired FindAllPessoasWithEnderecosService findAllWithEnderecos;
     @Autowired FindOnePessoaService findOne;
     @Autowired ExcluirPessoaService excluirPessoa;
 
@@ -39,6 +38,14 @@ public class PessoaController {
     @GetMapping("/api/pessoas")
     public ResponseEntity<List<Pessoa>> findAllPessoas(){
         var listPessoas = findAll.executar();
+        return listPessoas != null ?
+                ResponseEntity.status(HttpStatus.OK).body(listPessoas):
+                ResponseEntity.status(HttpStatus.NO_CONTENT).build();
+    }
+
+    @GetMapping("/api/pessoas-and-enderecos")
+    public ResponseEntity<List<PessoaAndEnderecoDTO>> findAllPessoasAndEnderecos(){
+        var listPessoas = findAllWithEnderecos.executar();
         return listPessoas != null ?
                 ResponseEntity.status(HttpStatus.OK).body(listPessoas):
                 ResponseEntity.status(HttpStatus.NO_CONTENT).build();
