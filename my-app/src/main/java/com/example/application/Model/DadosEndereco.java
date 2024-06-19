@@ -5,13 +5,15 @@ public class DadosEndereco {
     private String numero;
     private String complemento;
     private String bairro;
+    private boolean principal;
 
     public DadosEndereco(){}
-    public DadosEndereco(String rua, String numero, String complemento, String bairro) {
+    public DadosEndereco(String rua, String numero, String complemento, String bairro, boolean principal) {
         this.rua = rua;
         this.numero = numero;
         this.complemento = complemento;
         this.bairro = bairro;
+        this.principal = principal;
     }
 
     public String getRua() {
@@ -44,5 +46,13 @@ public class DadosEndereco {
 
     public void setBairro(String bairro) {
         this.bairro = bairro;
+    }
+
+    public boolean isPrincipal() {
+        return principal;
+    }
+
+    public void setPrincipal(boolean principal) {
+        this.principal = principal;
     }
 }
