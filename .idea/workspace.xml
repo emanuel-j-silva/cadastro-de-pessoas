@@ -4,19 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8d23a327-6642-4eee-95df-caee05c420e2" name="Changes" comment="métodos get e post para endereço">
-      <change afterPath="$PROJECT_DIR$/my-app/src/main/java/com/example/application/DTO/PessoaAndEnderecoDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app/src/main/java/com/example/application/Service/FindAllPessoasWithEnderecosService.java" afterDir="false" />
+    <list default="true" id="8d23a327-6642-4eee-95df-caee05c420e2" name="Changes" comment="refatoração: permitir cadastro de vários endereços para a mesma pessoa">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/main/java/com/example/application/Config/JacksonConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/main/java/com/example/application/Config/JacksonConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/main/java/com/example/application/Controller/PessoaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/main/java/com/example/application/Controller/PessoaController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/main/java/com/example/application/Repository/PessoaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/main/java/com/example/application/Repository/PessoaRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/main/java/com/example/application/View/listperson/ListPersonView.java" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/main/java/com/example/application/View/listperson/ListPersonView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/target/classes/com/example/application/Config/JacksonConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/target/classes/com/example/application/Config/JacksonConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/main/java/com/example/application/Service/FindAllPessoasWithEnderecosService.java" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/main/java/com/example/application/Service/FindAllPessoasWithEnderecoPrincipalService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/target/classes/com/example/application/Controller/PessoaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/target/classes/com/example/application/Controller/PessoaController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/target/classes/com/example/application/Repository/PessoaRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/target/classes/com/example/application/Repository/PessoaRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/target/classes/com/example/application/View/listperson/ListPersonView$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/target/classes/com/example/application/View/listperson/ListPersonView$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/target/classes/com/example/application/View/listperson/ListPersonView.class" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/target/classes/com/example/application/View/listperson/ListPersonView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/target/classes/com/example/application/Service/FindAllPessoasWithEnderecosService.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

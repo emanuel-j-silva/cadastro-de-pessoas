@@ -17,7 +17,8 @@ public class PessoaController {
 
     @Autowired CadastrarPessoaService cadastrarPessoa;
     @Autowired FindAllPessoaService findAll;
-    @Autowired FindAllPessoasWithEnderecosService findAllWithEnderecos;
+    @Autowired
+    FindAllPessoasWithEnderecoPrincipalService findAllWithEnderecos;
     @Autowired FindOnePessoaService findOne;
     @Autowired ExcluirPessoaService excluirPessoa;
 
